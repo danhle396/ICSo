@@ -1,0 +1,21 @@
+CE2031 Project 23 - simulation summary  (2026-11-16 02:36)
+iverilog -g2012: False ; sources down-converted: True
+seed 1     TRAFFIC TB PASSED : seed 1, 34254 cycles, 305 directed checks, 0 errors, 0 checker violations
+            COVERAGE : states 9/9, arcs 24/24
+            golden model: PASS, 0 mismatch
+seed 7     TRAFFIC TB PASSED : seed 7, 34254 cycles, 305 directed checks, 0 errors, 0 checker violations
+            COVERAGE : states 9/9, arcs 24/24
+            golden model: PASS, 0 mismatch
+seed 2026  TRAFFIC TB PASSED : seed 2026, 34254 cycles, 305 directed checks, 0 errors, 0 checker violations
+            COVERAGE : states 9/9, arcs 24/24
+            golden model: PASS, 0 mismatch
+
+Mutants (seed 1), each must be caught:
+M1  emergency in a green goes straight to EMERGENCY (no yellow)    TB FAILED (39 directed errors, 41 checker violations); violated: a_yel; golden: FAIL, 6738 mismatches -> CAUGHT (expected detector: a_yel)
+M2  debouncer with 2 samples instead of 3                          TB FAILED (9 directed errors, 0 checker violations); violated: -; golden: FAIL, 21096 mismatches -> CAUGHT (expected detector: T11)
+M3  pedestrian request not latched                                 TB FAILED (33 directed errors, 0 checker violations); violated: -; golden: FAIL, 23318 mismatches -> CAUGHT (expected detector: golden)
+M4  NS_Y goes to EW_G (RED1 skipped)                               TB FAILED (125 directed errors, 0 checker violations); violated: -; golden: FAIL, 24762 mismatches -> CAUGHT (expected detector: golden)
+M5  EW forced green together with NS_G                             TB FAILED (0 directed errors, 11012 checker violations); violated: a_safe,a_yel; golden: FAIL, 10649 mismatches -> CAUGHT (expected detector: a_safe)
+M6  clk_divider not restarted at a phase change                    TB FAILED (17 directed errors, 36 checker violations); violated: a_ylen; golden: FAIL, 6128 mismatches -> CAUGHT (expected detector: a_ylen)
+
+ALL PASSED (3 seeds: testbench, golden model, coverage 9/9 + 24/24; 6/6 mutants caught)

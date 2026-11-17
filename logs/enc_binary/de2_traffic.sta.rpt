@@ -1,0 +1,1436 @@
+TimeQuest Timing Analyzer report for de2_traffic
+Mon Nov 16 02:37:15 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'CLOCK_50'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Recovery: 'CLOCK_50'
+ 15. Slow Model Removal: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 17. Slow Model Datasheet Report
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLOCK_50'
+ 24. Fast Model Hold: 'CLOCK_50'
+ 25. Fast Model Recovery: 'CLOCK_50'
+ 26. Fast Model Removal: 'CLOCK_50'
+ 27. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 28. Fast Model Datasheet Report
+ 29. Multicorner Timing Analysis Summary
+ 30. Setup Transfers
+ 31. Hold Transfers
+ 32. Recovery Transfers
+ 33. Removal Transfers
+ 34. Report TCCS
+ 35. Report RSKM
+ 36. Unconstrained Paths
+ 37. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; de2_traffic                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 20     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------+
+; SDC File List                                       ;
++-----------------+--------+--------------------------+
+; SDC File Path   ; Status ; Read at                  ;
++-----------------+--------+--------------------------+
+; de2_traffic.sdc ; OK     ; Mon Nov 16 02:37:15 2026 ;
++-----------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_50   ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 112.46 MHz ; 112.46 MHz      ; CLOCK_50   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; 11.108 ; 0.000         ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.391 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Slow Model Recovery Summary       ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; 17.957 ; 0.000         ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Removal Summary       ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 1.034 ; 0.000         ;
++----------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+-------+---------------------+
+; Clock    ; Slack ; End Point TNS       ;
++----------+-------+---------------------+
+; CLOCK_50 ; 9.000 ; 0.000               ;
++----------+-------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                                                                 ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 11.108 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.931      ;
+; 11.116 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.923      ;
+; 11.335 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.701      ;
+; 11.343 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.693      ;
+; 11.373 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.666      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.430 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.621      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.438 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.613      ;
+; 11.462 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.577      ;
+; 11.501 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.538      ;
+; 11.519 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.517      ;
+; 11.519 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.517      ;
+; 11.519 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.517      ;
+; 11.519 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.517      ;
+; 11.519 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.517      ;
+; 11.527 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.509      ;
+; 11.527 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.509      ;
+; 11.527 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.509      ;
+; 11.527 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.509      ;
+; 11.527 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.509      ;
+; 11.600 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.436      ;
+; 11.610 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 8.429      ;
+; 11.689 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.347      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.695 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.356      ;
+; 11.728 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.308      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.267      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.252      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.252      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.252      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.252      ;
+; 11.784 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.252      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.823 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.015      ; 8.228      ;
+; 11.837 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.199      ;
+; 11.847 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.190      ;
+; 11.847 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.190      ;
+; 11.847 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.190      ;
+; 11.853 ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req  ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 8.178      ;
+; 11.855 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.182      ;
+; 11.855 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.182      ;
+; 11.855 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 8.182      ;
+; 11.873 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 8.163      ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                                                                 ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; hb                                                    ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.517 ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.783      ;
+; 0.519 ; rst_meta                                              ; rst_n                                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.519 ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.519 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.521 ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.787      ;
+; 0.523 ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.525 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.791      ;
+; 0.526 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.792      ;
+; 0.526 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.792      ;
+; 0.529 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.795      ;
+; 0.533 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.799      ;
+; 0.533 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.799      ;
+; 0.534 ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.800      ;
+; 0.536 ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.802      ;
+; 0.537 ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.803      ;
+; 0.537 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.803      ;
+; 0.656 ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.922      ;
+; 0.666 ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.932      ;
+; 0.666 ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.932      ;
+; 0.671 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.937      ;
+; 0.686 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.952      ;
+; 0.687 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.953      ;
+; 0.687 ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.953      ;
+; 0.705 ; traffic_top:u_top|clk_divider:u_div|tick              ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.970      ;
+; 0.707 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.973      ;
+; 0.716 ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 0.978      ;
+; 0.781 ; traffic_top:u_top|ped_q                               ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.047      ;
+; 0.795 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.797 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.063      ;
+; 0.797 ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.063      ;
+; 0.801 ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.801 ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.806 ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.808 ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.074      ;
+; 0.809 ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.811 ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.077      ;
+; 0.812 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.078      ;
+; 0.814 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.821 ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.087      ;
+; 0.822 ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.088      ;
+; 0.822 ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.088      ;
+; 0.828 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.094      ;
+; 0.829 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.095      ;
+; 0.834 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.100      ;
+; 0.837 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.103      ;
+; 0.838 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.105      ;
+; 0.841 ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.107      ;
+; 0.841 ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.107      ;
+; 0.843 ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.109      ;
+; 0.845 ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.846 ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846 ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846 ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846 ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846 ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.849 ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.115      ;
+; 0.851 ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.853 ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.119      ;
+; 0.853 ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.119      ;
+; 0.856 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.122      ;
+; 0.857 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.123      ;
+; 0.870 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.136      ;
+; 0.880 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.146      ;
+; 0.881 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.147      ;
+; 0.925 ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.191      ;
+; 0.929 ; traffic_top:u_top|clk_divider:u_div|fast_q            ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.195      ;
+; 1.013 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.279      ;
+; 1.016 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.282      ;
+; 1.027 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.285      ;
+; 1.028 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.286      ;
+; 1.028 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.286      ;
+; 1.029 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.287      ;
+; 1.037 ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 1.290      ;
+; 1.059 ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.325      ;
+; 1.125 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.383      ;
+; 1.126 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.384      ;
+; 1.127 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.385      ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'CLOCK_50'                                                                                                                  ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 17.957 ; rst_n     ; traffic_top:u_top|ped_q                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.071      ;
+; 17.957 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.071      ;
+; 17.957 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|emergency_active  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.071      ;
+; 17.957 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_lamp          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.071      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.959 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.061      ;
+; 17.967 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.016     ; 2.053      ;
+; 17.973 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.013     ; 2.050      ;
+; 17.973 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.013     ; 2.050      ;
+; 17.973 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.013     ; 2.050      ;
+; 17.973 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.013     ; 2.050      ;
+; 17.973 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.013     ; 2.050      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.990 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.038      ;
+; 17.998 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.030      ;
+; 17.998 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_0 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 2.030      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 2.033      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_2 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 2.028      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_1 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 2.028      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 2.028      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 2.028      ;
+; 18.003 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.005     ; 2.028      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.006 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.001     ; 2.029      ;
+; 18.197 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.824      ;
+; 18.197 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.824      ;
+; 18.197 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.824      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.308 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 1.729      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.325 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.005      ; 1.716      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.543 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.491      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
+; 18.736 ; rst_n     ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 1.300      ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'CLOCK_50'                                                                                                                  ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.034 ; rst_n     ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.300      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.227 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.491      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.445 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.005      ; 1.716      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.462 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 1.729      ;
+; 1.573 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.824      ;
+; 1.573 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.824      ;
+; 1.573 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.824      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.764 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 2.029      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 2.033      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_2 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 2.028      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 2.028      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 2.028      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 2.028      ;
+; 1.767 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.005     ; 2.028      ;
+; 1.772 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.030      ;
+; 1.772 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_0 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.030      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.780 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.038      ;
+; 1.797 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 2.050      ;
+; 1.797 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 2.050      ;
+; 1.797 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 2.050      ;
+; 1.797 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 2.050      ;
+; 1.797 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.013     ; 2.050      ;
+; 1.803 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.053      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.811 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.061      ;
+; 1.813 ; rst_n     ; traffic_top:u_top|ped_q                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.071      ;
+; 1.813 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.071      ;
+; 1.813 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|emergency_active  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.071      ;
+; 1.813 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_lamp          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 2.071      ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                       ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                        ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; hb                                            ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; hb                                            ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; rst_meta                                      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; rst_meta                                      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; rst_n                                         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; rst_n                                         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[0]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[0]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[10]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[10]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[11]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[11]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[12]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[12]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[13]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[13]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[14]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[14]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[15]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[15]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[16]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[16]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[17]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[17]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[18]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[18]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[19]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[19]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[1]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[1]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[20]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[20]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[21]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[21]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[22]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[22]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[23]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[23]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[24]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[24]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[25]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[25]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[2]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[2]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[3]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[3]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[4]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[4]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[5]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[5]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[6]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[6]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[7]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[7]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[8]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[8]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[9]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[9]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|fast_q    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|fast_q    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|tick      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|tick      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|ped_q                       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|ped_q                       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[4]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[4]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[5]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[5]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[6]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[6]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[7]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[7]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]  ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+
+
+-------------------------------
+; Slow Model Datasheet Report ;
+-------------------------------
+Nothing to report.
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; 15.975 ; 0.000         ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Fast Model Recovery Summary       ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; 18.932 ; 0.000         ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Fast Model Removal Summary       ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.583 ; 0.000         ;
++----------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+-------+---------------------+
+; Clock    ; Slack ; End Point TNS       ;
++----------+-------+---------------------+
+; CLOCK_50 ; 9.000 ; 0.000               ;
++----------+-------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                                                                 ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.975 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 4.060      ;
+; 15.991 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 4.044      ;
+; 16.077 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.955      ;
+; 16.093 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.939      ;
+; 16.106 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 3.929      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.141 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.903      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.875      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.875      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.875      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.875      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.875      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.157 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.887      ;
+; 16.170 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 3.865      ;
+; 16.173 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.859      ;
+; 16.173 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.859      ;
+; 16.173 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.859      ;
+; 16.173 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.859      ;
+; 16.173 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.859      ;
+; 16.205 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 3.830      ;
+; 16.208 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.824      ;
+; 16.228 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 3.807      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.760      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.272 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.772      ;
+; 16.288 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[3]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.744      ;
+; 16.288 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[4]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.744      ;
+; 16.288 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[6]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.744      ;
+; 16.288 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[7]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.744      ;
+; 16.288 ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; traffic_top:u_top|state_timer:u_timer|cnt[0]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.744      ;
+; 16.300 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.733      ;
+; 16.300 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.733      ;
+; 16.300 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.733      ;
+; 16.307 ; traffic_top:u_top|state_timer:u_timer|cnt[2] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.725      ;
+; 16.311 ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req  ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 3.717      ;
+; 16.316 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.717      ;
+; 16.316 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.717      ;
+; 16.316 ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 3.717      ;
+; 16.330 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[5]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.702      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[13]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[14]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[15]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[16]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[17]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[18]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[19]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[20]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[21]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[22]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[23]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[24]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.336 ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; traffic_top:u_top|clk_divider:u_div|cnt[25]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.012      ; 3.708      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[1]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[2]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[3]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[4]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[5]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[6]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[7]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[8]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[9]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[10]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[11]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[12]    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.343 ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; traffic_top:u_top|clk_divider:u_div|cnt[0]     ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.018      ; 3.707      ;
+; 16.350 ; traffic_top:u_top|state_timer:u_timer|cnt[1] ; traffic_top:u_top|state_timer:u_timer|cnt[1]   ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 3.682      ;
++--------+----------------------------------------------+------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                                                                 ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                             ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; hb                                                    ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; rst_meta                                              ; rst_n                                                 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.245 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250 ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251 ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.403      ;
+; 0.251 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.403      ;
+; 0.306 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.458      ;
+; 0.307 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.459      ;
+; 0.322 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.474      ;
+; 0.322 ; traffic_top:u_top|clk_divider:u_div|tick              ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.001     ; 0.473      ;
+; 0.323 ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.475      ;
+; 0.326 ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.476      ;
+; 0.329 ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.481      ;
+; 0.334 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.486      ;
+; 0.344 ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.496      ;
+; 0.355 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.507      ;
+; 0.358 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.361 ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.365 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.518      ;
+; 0.368 ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.372 ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; traffic_top:u_top|ped_q                               ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.532      ;
+; 0.381 ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.533      ;
+; 0.382 ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.534      ;
+; 0.384 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.536      ;
+; 0.384 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.536      ;
+; 0.386 ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.538      ;
+; 0.389 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.541      ;
+; 0.401 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.553      ;
+; 0.402 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.554      ;
+; 0.409 ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.561      ;
+; 0.436 ; traffic_top:u_top|clk_divider:u_div|fast_q            ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.588      ;
+; 0.448 ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.600      ;
+; 0.452 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.604      ;
+; 0.472 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.617      ;
+; 0.472 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.617      ;
+; 0.473 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.618      ;
+; 0.473 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 0.618      ;
+; 0.484 ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.636      ;
+; 0.484 ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 0.624      ;
+; 0.493 ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.645      ;
+; 0.496 ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
++-------+-------------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'CLOCK_50'                                                                                                                  ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.932 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.085      ;
+; 18.933 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.015     ; 1.084      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|ped_q                               ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.084      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.084      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.012     ; 1.080      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.012     ; 1.080      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.012     ; 1.080      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|emergency_active  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.084      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_lamp          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.084      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.012     ; 1.080      ;
+; 18.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.012     ; 1.080      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.946 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.009     ; 1.077      ;
+; 18.960 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.064      ;
+; 18.960 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_0 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.008     ; 1.064      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.961 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 1.069      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.964 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.003     ; 1.065      ;
+; 18.965 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_2 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 1.063      ;
+; 18.965 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_1 ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 1.063      ;
+; 18.965 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[2]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 1.063      ;
+; 18.965 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 1.063      ;
+; 18.965 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.004     ; 1.063      ;
+; 19.036 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.014     ; 0.982      ;
+; 19.036 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.014     ; 0.982      ;
+; 19.036 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.014     ; 0.982      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.105 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.001      ; 0.928      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.113 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.003      ; 0.922      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.210 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.002     ; 0.820      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
+; 19.297 ; rst_n     ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 0.735      ;
++--------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'CLOCK_50'                                                                                                                  ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_emg|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cns|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.583 ; rst_n     ; hb                                                    ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.735      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_ped|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s1           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|s2           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|sh[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.670 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_cew|dout         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 0.820      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[1]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[2]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[3]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[4]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[5]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[6]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[7]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[8]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[9]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[10]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[11]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[12]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.767 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[0]            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.003      ; 0.922      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s1          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|s2          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|sh[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|sync_debounce:u_db_fast|dout        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|fast_q            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.775 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|tick              ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.001      ; 0.928      ;
+; 0.844 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[0]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.014     ; 0.982      ;
+; 0.844 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[1]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.014     ; 0.982      ;
+; 0.844 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ext_cnt[2]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.014     ; 0.982      ;
+; 0.915 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_2 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.063      ;
+; 0.915 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_1 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.063      ;
+; 0.915 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.063      ;
+; 0.915 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.063      ;
+; 0.915 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ew[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.063      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[13]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[14]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[15]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[16]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[17]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[18]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[19]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[20]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[21]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[22]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[23]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[24]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.916 ; rst_n     ; traffic_top:u_top|clk_divider:u_div|cnt[25]           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.003     ; 1.065      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[8]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.919 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 1.069      ;
+; 0.920 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_3 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.064      ;
+; 0.920 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|state.state_bit_0 ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.064      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[9]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.934 ; rst_n     ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.009     ; 1.077      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|ped_q                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.084      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_req           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.084      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|next_ew           ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 1.080      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[1]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 1.080      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[2]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 1.080      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|emergency_active  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.084      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|ped_lamp          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.008     ; 1.084      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 1.080      ;
+; 0.940 ; rst_n     ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1]       ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 1.080      ;
+; 0.947 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[5]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.084      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[2]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[3]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[4]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[6]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[7]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
+; 0.948 ; rst_n     ; traffic_top:u_top|state_timer:u_timer|cnt[0]          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.015     ; 1.085      ;
++-------+-----------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                       ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                        ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; hb                                            ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; hb                                            ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; rst_meta                                      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; rst_meta                                      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; rst_n                                         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; rst_n                                         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[0]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[0]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[10]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[10]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[11]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[11]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[12]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[12]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[13]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[13]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[14]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[14]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[15]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[15]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[16]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[16]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[17]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[17]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[18]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[18]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[19]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[19]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[1]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[1]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[20]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[20]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[21]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[21]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[22]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[22]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[23]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[23]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[24]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[24]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[25]   ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[25]   ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[2]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[2]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[3]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[3]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[4]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[4]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[5]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[5]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[6]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[6]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[7]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[7]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[8]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[8]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[9]    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|cnt[9]    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|fast_q    ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|fast_q    ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|tick      ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|clk_divider:u_div|tick      ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|ped_q                       ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|ped_q                       ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[2]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[3]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[4]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[4]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[5]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[5]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[6]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[6]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[7]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|state_timer:u_timer|cnt[7]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[0]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[10] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[11] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[12] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[13] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[14] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[15] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[16] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17] ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[17] ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; traffic_top:u_top|strobe_gen:u_strobe|cnt[1]  ;
++-------+--------------+----------------+------------------+----------+------------+-----------------------------------------------+
+
+
+-------------------------------
+; Fast Model Datasheet Report ;
+-------------------------------
+Nothing to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 11.108 ; 0.215 ; 17.957   ; 0.583   ; 9.000               ;
+;  CLOCK_50        ; 11.108 ; 0.215 ; 17.957   ; 0.583   ; 9.000               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50        ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 17326    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 17326    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 98       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50 ; 98       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 16 02:37:15 2026
+Info: Command: quartus_sta de2_traffic -c de2_traffic
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (332104): Reading SDC File: 'de2_traffic.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 11.108
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    11.108         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 17.957
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    17.957         0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 1.034
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.034         0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 15.975
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    15.975         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_50 
+Info (332146): Worst-case recovery slack is 18.932
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    18.932         0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.583
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.583         0.000 CLOCK_50 
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 CLOCK_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4548 megabytes
+    Info: Processing ended: Mon Nov 16 02:37:15 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

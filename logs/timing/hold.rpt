@@ -1,0 +1,11 @@
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Report Timing                                                                                                                                                                   ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_emg|dout   ; traffic_top:u_top|sync_debounce:u_db_emg|dout   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0] ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|sync_debounce:u_db_cew|dout   ; traffic_top:u_top|sync_debounce:u_db_cew|dout   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1] ; traffic_top:u_top|traffic_fsm:u_fsm|light_ns[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; traffic_top:u_top|traffic_fsm:u_fsm|state.RED1  ; traffic_top:u_top|traffic_fsm:u_fsm|state.RED1  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
++-------+-------------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+

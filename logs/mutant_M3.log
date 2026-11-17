@@ -1,0 +1,89 @@
+traffic_tb: seed 1, tag M3_seed1
+TEST_START T1 0 ns : normal cycle, cars waiting on both roads: 10-3-1-10-3-1
+TEST_START T2 2280 ns : button pressed in NS_Y: PED_WALK after RED1, then EW_G
+ERROR: T2  2840 ns: request latched during NS_Y  (state RED1, time_left 01)
+ERROR: T2  2880 ns: PED_WALK: lamp on, request cleared  (state EW_G, time_left 10)
+ERROR: T2  2880 ns: state EW_G, expected PED_WALK
+ERROR: T2  2880 ns: PED_WALK starts with time_left 10, expected 05
+ERROR: T2  3280 ns: PED_WALK lasted 40 cycles, expected 20
+ERROR: T2  3280 ns: state EW_Y, expected EW_G
+TEST_START T3 3280 ns : button held, then pressed three times: one PED_WALK only
+ERROR: T3  3900 ns: PED_WALK not reached within 58 cycles (state EW_G)
+ERROR: T3  4640 ns: held button: one PED_WALK  (state NS_G, time_left 05)
+ERROR: T3  5600 ns: PED_WALK not reached within 56 cycles (state EW_G)
+ERROR: T3  6000 ns: three presses: one PED_WALK  (state NS_G, time_left 05)
+TEST_START T4 6000 ns : button pressed during PED_WALK is ignored
+ERROR: T4  6660 ns: PED_WALK not reached within 56 cycles (state EW_G)
+ERROR: T4  6720 ns: no request left after PED_WALK  (state EW_G, time_left 07)
+ERROR: T4  6720 ns: EW_G starts with time_left 07, expected 10
+ERROR: T4  7000 ns: EW_G lasted 28 cycles, expected 40
+ERROR: T4  7160 ns: one PED_WALK  (state NS_G, time_left 10)
+TEST_START T5 7160 ns : emergency in NS_G: full yellow, EMERGENCY, RECOVER, EW_G
+TEST_START T6 7920 ns : emergency in NS_Y: the yellow ends normally, then EMERGENCY
+TEST_START T7 8620 ns : emergency in PED_WALK: EMERGENCY at once, walk lamp off
+ERROR: T7  9280 ns: PED_WALK not reached within 56 cycles (state EW_G)
+ERROR: T7  9380 ns: EMERGENCY not reached within 7 cycles (state EW_Y)
+ERROR: T7  9450 ns: RECOVER not reached within 7 cycles (state EW_Y)
+ERROR: T7  9450 ns: state EW_Y, expected RECOVER
+ERROR: T7  9450 ns: RECOVER starts with time_left 01, expected 02
+TEST_START T8 9490 ns : emergency and button together: EMERGENCY first, PED_WALK after RECOVER
+TEST_START T9 10550 ns : second emergency during RECOVER: back to EMERGENCY
+TEST_START T10 11330 ns : reset in the middle of a phase: NS_G with T_G at once
+TEST_START T11 12450 ns : 1- and 2-cycle glitches on emg / ped are filtered
+TEST_START T12 13050 ns : 3-cycle pulses on emg / ped are accepted
+TEST_START T13 13360 ns : no car on the other road: green extended to T_G_MAX, both roads
+TEST_START T14 14760 ns : a car arrives during the extension: the green ends at the next tick
+  T14: NS_G lasted 52 cycles (40 without extension, 60 at most)
+TEST_START T15 15320 ns : fast = 1: every phase twice as short (TICK_DIV / FAST_DIV)
+TEST_START T16 16160 ns : emergency held for a long time: all red, no timeout
+TEST_START T17 36550 ns : emergency at every offset from the tick: full yellow, full RECOVER
+TEST_START T18 38570 ns : coverage: emergency in RED1 / EW_G / RED2, pedestrian after RED2
+Phase 1: 305 directed checks, 33 errors, 4257 cycles
+Phase 2: 30000 random cycles, seed 1
+Checker (PLAN 4.2)   triggered  violations
+  a_safe           34163           0
+  a_emg               86           0
+  a_yel              751           0
+  a_onehot         34163           0
+  a_ped               20           0
+  a_allred            73           0
+  a_gmax             751           0
+  a_ylen             742           0
+CHECKER VIOLATIONS : 0
+Coverage: states entered
+  0      NS_G    362
+  1      NS_Y    384
+  2      RED1    341
+  3      EW_G    381
+  4      EW_Y    367
+  5      RED2    333
+  6  PED_WALK      2
+  7 EMERGENCY     77
+  8   RECOVER     77
+Coverage: arcs of PLAN 1.3
+  arc  0     32
+  arc  1    770
+  arc  2    352
+  arc  3     40
+  arc  4    341
+  arc  5      3
+  arc  6      0
+  arc  7    338
+  arc  8     27
+  arc  9    645
+  arc 10    340
+  arc 11     30
+  arc 12    333
+  arc 13      3
+  arc 14      2
+  arc 15    327
+  arc 16      0
+  arc 17      0
+  arc 18      2
+  arc 19     77
+  arc 20      1
+  arc 21      0
+  arc 22     43
+  arc 23     33
+COVERAGE : states 9/9, arcs 20/24
+TRAFFIC TB FAILED : seed 1, 34258 cycles, 305 directed checks, 33 errors, 0 checker violations

@@ -1,0 +1,14 @@
+golden model: vectors\stim_M6_seed1.txt vs vectors\rtl_M6_seed1.txt
+parameters: TICK_DIV=4 FAST_DIV=2 DB_DIV=1 T_G=10 T_G_MAX=15 T_Y=3 T_R=1 T_WALK=5 T_RC=2
+MISMATCH cycle 896: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 897: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 900: expected state RECOVER NS=100 EW=100 walk=0 time_left=01 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 976: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 977: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 978: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 980: expected state RECOVER NS=100 EW=100 walk=0 time_left=01 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 1040: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 1041: expected state RECOVER NS=100 EW=100 walk=0 time_left=02 emg=0 | RTL 8 100 100 0 01 0
+MISMATCH cycle 1044: expected state RECOVER NS=100 EW=100 walk=0 time_left=01 emg=0 | RTL 6 100 100 1 05 0
+cycles compared: 34213
+FAIL, 6128 mismatches

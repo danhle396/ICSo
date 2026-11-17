@@ -1,0 +1,16 @@
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Report Timing                                                                                                                                                              ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[4] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[5] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[6] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[7] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[0] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
+; 12.397 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|clk_divider:u_div|cnt[13]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.011     ; 7.628      ;
+; 12.397 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|clk_divider:u_div|cnt[14]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.011     ; 7.628      ;
+; 12.397 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|clk_divider:u_div|cnt[15]  ; CLOCK_50     ; CLOCK_50    ; 20.000       ; -0.011     ; 7.628      ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+

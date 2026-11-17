@@ -1,0 +1,4 @@
+golden model: vectors\stim_seed7.txt vs vectors\rtl_seed7.txt
+parameters: TICK_DIV=4 FAST_DIV=2 DB_DIV=1 T_G=10 T_G_MAX=15 T_Y=3 T_R=1 T_WALK=5 T_RC=2
+cycles compared: 34254
+PASS, 0 mismatch

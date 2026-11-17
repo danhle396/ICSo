@@ -1,0 +1,119 @@
+----------------
+; Command Info ;
+----------------
+Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 12.365 
+
+Tcl Command:
+    report_timing -setup -file D:/hoctap/fpga/verilog_school/ICso/project23_traffic/logs/timing/setup_path.rpt -npaths 1 -detail full_path
+
+Options:
+    -setup 
+    -npaths 1 
+    -detail full_path 
+    -file {D:/hoctap/fpga/verilog_school/ICso/project23_traffic/logs/timing/setup_path.rpt} 
+
+Delay Model:
+    Slow Model
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Summary of Paths                                                                                                                                                           ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 12.365 ; traffic_top:u_top|state_timer:u_timer|cnt[3] ; traffic_top:u_top|state_timer:u_timer|cnt[1] ; CLOCK_50     ; CLOCK_50    ; 20.000       ; 0.000      ; 7.671      ;
++--------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+Path #1: Setup slack is 12.365 
+===============================================================================
++-------------------------------------------------------------------+
+; Path Summary                                                      ;
++--------------------+----------------------------------------------+
+; Property           ; Value                                        ;
++--------------------+----------------------------------------------+
+; From Node          ; traffic_top:u_top|state_timer:u_timer|cnt[3] ;
+; To Node            ; traffic_top:u_top|state_timer:u_timer|cnt[1] ;
+; Launch Clock       ; CLOCK_50                                     ;
+; Latch Clock        ; CLOCK_50                                     ;
+; Data Arrival Time  ; 10.329                                       ;
+; Data Required Time ; 22.694                                       ;
+; Slack              ; 12.365                                       ;
++--------------------+----------------------------------------------+
+
++------------------------------------------------------------------------------------+
+; Statistics                                                                         ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Property               ; Value  ; Count ; Total Delay ; % of Total ; Min   ; Max   ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+; Setup Relationship     ; 20.000 ;       ;             ;            ;       ;       ;
+; Clock Skew             ; 0.000  ;       ;             ;            ;       ;       ;
+; Data Delay             ; 7.671  ;       ;             ;            ;       ;       ;
+; Number of Logic Levels ;        ; 7     ;             ;            ;       ;       ;
+; Physical Delays        ;        ;       ;             ;            ;       ;       ;
+;  Arrival Path          ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 1.122       ; 42         ; 0.118 ; 1.004 ;
+;    Cell                ;        ; 3     ; 1.536       ; 57         ; 0.000 ; 0.999 ;
+;   Data                 ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 8     ; 4.223       ; 55         ; 0.232 ; 0.987 ;
+;    Cell                ;        ; 9     ; 3.198       ; 41         ; 0.000 ; 0.660 ;
+;    uTco                ;        ; 1     ; 0.250       ; 3          ; 0.250 ; 0.250 ;
+;  Required Path         ;        ;       ;             ;            ;       ;       ;
+;   Clock                ;        ;       ;             ;            ;       ;       ;
+;    IC                  ;        ; 2     ; 1.122       ; 42         ; 0.118 ; 1.004 ;
+;    Cell                ;        ; 3     ; 1.536       ; 57         ; 0.000 ; 0.999 ;
++------------------------+--------+-------+-------------+------------+-------+-------+
+Note: Negative delays are omitted from totals when calculating percentages
+
++------------------------------------------------------------------------------------------------------------+
+; Data Arrival Path                                                                                          ;
++----------+---------+----+------+--------+-------------------+----------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location          ; Element                                      ;
++----------+---------+----+------+--------+-------------------+----------------------------------------------+
+; 0.000    ; 0.000   ;    ;      ;        ;                   ; launch edge time                             ;
+; 2.658    ; 2.658   ;    ;      ;        ;                   ; clock path                                   ;
+;   0.000  ;   0.000 ;    ;      ;        ;                   ; source latency                               ;
+;   0.000  ;   0.000 ;    ;      ; 1      ; PIN_N2            ; CLOCK_50                                     ;
+;   0.999  ;   0.999 ; RR ; CELL ; 1      ; IOC_X0_Y18_N0     ; CLOCK_50|combout                             ;
+;   1.117  ;   0.118 ; RR ; IC   ; 1      ; CLKCTRL_G2        ; CLOCK_50~clkctrl|inclk[0]                    ;
+;   1.117  ;   0.000 ; RR ; CELL ; 101    ; CLKCTRL_G2        ; CLOCK_50~clkctrl|outclk                      ;
+;   2.121  ;   1.004 ; RR ; IC   ; 1      ; LCFF_X38_Y8_N23   ; u_top|u_timer|cnt[3]|clk                     ;
+;   2.658  ;   0.537 ; RR ; CELL ; 1      ; LCFF_X38_Y8_N23   ; traffic_top:u_top|state_timer:u_timer|cnt[3] ;
+; 10.329   ; 7.671   ;    ;      ;        ;                   ; data path                                    ;
+;   2.908  ;   0.250 ;    ; uTco ; 1      ; LCFF_X38_Y8_N23   ; traffic_top:u_top|state_timer:u_timer|cnt[3] ;
+;   2.908  ;   0.000 ; RR ; CELL ; 6      ; LCFF_X38_Y8_N23   ; u_top|u_timer|cnt[3]|regout                  ;
+;   3.633  ;   0.725 ; RR ; IC   ; 1      ; LCCOMB_X38_Y8_N4  ; u_top|u_timer|Equal0~1|datac                 ;
+;   3.908  ;   0.275 ; RR ; CELL ; 2      ; LCCOMB_X38_Y8_N4  ; u_top|u_timer|Equal0~1|combout               ;
+;   4.163  ;   0.255 ; RR ; IC   ; 1      ; LCCOMB_X38_Y8_N6  ; u_top|u_fsm|done|datab                       ;
+;   4.583  ;   0.420 ; RF ; CELL ; 13     ; LCCOMB_X38_Y8_N6  ; u_top|u_fsm|done|combout                     ;
+;   5.570  ;   0.987 ; FF ; IC   ; 1      ; LCCOMB_X37_Y9_N22 ; u_top|u_fsm|Selector1~0|dataa                ;
+;   5.968  ;   0.398 ; FR ; CELL ; 1      ; LCCOMB_X37_Y9_N22 ; u_top|u_fsm|Selector1~0|combout              ;
+;   6.228  ;   0.260 ; RR ; IC   ; 1      ; LCCOMB_X37_Y9_N24 ; u_top|u_fsm|Selector0~2|datab                ;
+;   6.648  ;   0.420 ; RR ; CELL ; 5      ; LCCOMB_X37_Y9_N24 ; u_top|u_fsm|Selector0~2|combout              ;
+;   7.353  ;   0.705 ; RR ; IC   ; 1      ; LCCOMB_X37_Y9_N30 ; u_top|u_fsm|WideOr1~0|dataa                  ;
+;   7.791  ;   0.438 ; RR ; CELL ; 2      ; LCCOMB_X37_Y9_N30 ; u_top|u_fsm|WideOr1~0|combout                ;
+;   8.037  ;   0.246 ; RR ; IC   ; 1      ; LCCOMB_X37_Y9_N26 ; u_top|u_fsm|WideOr1~3|datad                  ;
+;   8.186  ;   0.149 ; RR ; CELL ; 12     ; LCCOMB_X37_Y9_N26 ; u_top|u_fsm|WideOr1~3|combout                ;
+;   8.999  ;   0.813 ; RR ; IC   ; 1      ; LCCOMB_X38_Y8_N12 ; u_top|u_timer|cnt[2]~3|dataa                 ;
+;   9.437  ;   0.438 ; RR ; CELL ; 7      ; LCCOMB_X38_Y8_N12 ; u_top|u_timer|cnt[2]~3|combout               ;
+;   9.669  ;   0.232 ; RR ; IC   ; 1      ; LCFF_X38_Y8_N1    ; u_top|u_timer|cnt[1]|ena                     ;
+;   10.329 ;   0.660 ; RR ; CELL ; 1      ; LCFF_X38_Y8_N1    ; traffic_top:u_top|state_timer:u_timer|cnt[1] ;
++----------+---------+----+------+--------+-------------------+----------------------------------------------+
+
++---------------------------------------------------------------------------------------------------------+
+; Data Required Path                                                                                      ;
++----------+---------+----+------+--------+----------------+----------------------------------------------+
+; Total    ; Incr    ; RF ; Type ; Fanout ; Location       ; Element                                      ;
++----------+---------+----+------+--------+----------------+----------------------------------------------+
+; 20.000   ; 20.000  ;    ;      ;        ;                ; latch edge time                              ;
+; 22.658   ; 2.658   ;    ;      ;        ;                ; clock path                                   ;
+;   20.000 ;   0.000 ;    ;      ;        ;                ; source latency                               ;
+;   20.000 ;   0.000 ;    ;      ; 1      ; PIN_N2         ; CLOCK_50                                     ;
+;   20.999 ;   0.999 ; RR ; CELL ; 1      ; IOC_X0_Y18_N0  ; CLOCK_50|combout                             ;
+;   21.117 ;   0.118 ; RR ; IC   ; 1      ; CLKCTRL_G2     ; CLOCK_50~clkctrl|inclk[0]                    ;
+;   21.117 ;   0.000 ; RR ; CELL ; 101    ; CLKCTRL_G2     ; CLOCK_50~clkctrl|outclk                      ;
+;   22.121 ;   1.004 ; RR ; IC   ; 1      ; LCFF_X38_Y8_N1 ; u_top|u_timer|cnt[1]|clk                     ;
+;   22.658 ;   0.537 ; RR ; CELL ; 1      ; LCFF_X38_Y8_N1 ; traffic_top:u_top|state_timer:u_timer|cnt[1] ;
+; 22.694   ; 0.036   ;    ; uTsu ; 1      ; LCFF_X38_Y8_N1 ; traffic_top:u_top|state_timer:u_timer|cnt[1] ;
++----------+---------+----+------+--------+----------------+----------------------------------------------+
+
+

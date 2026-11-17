@@ -1,0 +1,33 @@
+[dumpfile] "traffic_tb.vcd"
+[timestart] 0
+[size] 1600 540
+[pos] -1 -1
+*-17.0 0 -1 -1 -1 -1 -1 -1
+[sst_width] 0
+[signals_width] 230
+[sst_expanded] 0
+@24
+traffic_tb.test_id[31:0]
+@28
+traffic_tb.clk
+traffic_tb.rst_n
+traffic_tb.emg_sensor
+traffic_tb.ped_btn
+traffic_tb.car_ns
+traffic_tb.car_ew
+traffic_tb.fast
+traffic_tb.dut.emg_sync
+traffic_tb.dut.tick
+@24
+traffic_tb.state_dbg[3:0]
+@28
+traffic_tb.light_ns[2:0]
+traffic_tb.light_ew[2:0]
+traffic_tb.ped_lamp
+@22
+traffic_tb.time_left[7:0]
+@28
+traffic_tb.emergency_active
+traffic_tb.ped_req_dbg
+[pattern_trace] 1
+[pattern_trace] 0

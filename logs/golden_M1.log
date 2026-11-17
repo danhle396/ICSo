@@ -1,0 +1,14 @@
+golden model: vectors\stim_M1_seed1.txt vs vectors\rtl_M1_seed1.txt
+parameters: TICK_DIV=4 FAST_DIV=2 DB_DIV=1 T_G=10 T_G_MAX=15 T_Y=3 T_R=1 T_WALK=5 T_RC=2
+MISMATCH cycle 776: expected state NS_Y NS=010 EW=100 walk=0 time_left=03 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 777: expected state NS_Y NS=010 EW=100 walk=0 time_left=03 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 778: expected state NS_Y NS=010 EW=100 walk=0 time_left=03 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 779: expected state NS_Y NS=010 EW=100 walk=0 time_left=03 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 780: expected state NS_Y NS=010 EW=100 walk=0 time_left=02 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 781: expected state NS_Y NS=010 EW=100 walk=0 time_left=02 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 782: expected state NS_Y NS=010 EW=100 walk=0 time_left=02 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 783: expected state NS_Y NS=010 EW=100 walk=0 time_left=02 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 784: expected state NS_Y NS=010 EW=100 walk=0 time_left=01 emg=1 | RTL 7 100 100 0 00 1
+MISMATCH cycle 785: expected state NS_Y NS=010 EW=100 walk=0 time_left=01 emg=1 | RTL 7 100 100 0 00 1
+cycles compared: 59178
+FAIL, 6738 mismatches

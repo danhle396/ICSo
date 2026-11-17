@@ -1,0 +1,14 @@
+golden model: vectors\stim_M3_seed1.txt vs vectors\rtl_M3_seed1.txt
+parameters: TICK_DIV=4 FAST_DIV=2 DB_DIV=1 T_G=10 T_G_MAX=15 T_Y=3 T_R=1 T_WALK=5 T_RC=2
+MISMATCH cycle 288: expected state PED_WALK NS=100 EW=100 walk=1 time_left=05 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 289: expected state PED_WALK NS=100 EW=100 walk=1 time_left=05 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 290: expected state PED_WALK NS=100 EW=100 walk=1 time_left=05 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 291: expected state PED_WALK NS=100 EW=100 walk=1 time_left=05 emg=0 | RTL 3 100 001 0 10 0
+MISMATCH cycle 292: expected state PED_WALK NS=100 EW=100 walk=1 time_left=04 emg=0 | RTL 3 100 001 0 09 0
+MISMATCH cycle 293: expected state PED_WALK NS=100 EW=100 walk=1 time_left=04 emg=0 | RTL 3 100 001 0 09 0
+MISMATCH cycle 294: expected state PED_WALK NS=100 EW=100 walk=1 time_left=04 emg=0 | RTL 3 100 001 0 09 0
+MISMATCH cycle 295: expected state PED_WALK NS=100 EW=100 walk=1 time_left=04 emg=0 | RTL 3 100 001 0 09 0
+MISMATCH cycle 296: expected state PED_WALK NS=100 EW=100 walk=1 time_left=03 emg=0 | RTL 3 100 001 0 08 0
+MISMATCH cycle 297: expected state PED_WALK NS=100 EW=100 walk=1 time_left=03 emg=0 | RTL 3 100 001 0 08 0
+cycles compared: 34258
+FAIL, 23318 mismatches
