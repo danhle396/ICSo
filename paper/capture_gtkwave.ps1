@@ -1,11 +1,18 @@
 # =============================================================================
-# CE2031 Project 23 - capture GTKWave windows for the report
-#   .\paper\capture_gtkwave.ps1          (after run_sim.ps1)
-# Opens traffic_tb.vcd with traffic_tb.gtkw (signal list), zooms on the window
-# of one directed test (start times read from logs\traffic_tb_seed1.log),
-# takes a picture of the GTKWave window and closes it:
+# CE2031 Project 23 - GTKWave screenshots for the report
+#   .\paper\capture_gtkwave.ps1          (after run_sim.ps1 and make_figures.py)
+#
+# Opens the simulation dump traffic_tb.vcd in GTKWave, with
+#   paper\gtkwave\T<n>.gtkw    signals of the test, state and lamps shown by name
+#                              through the translate filters state.txt / lamp.txt
+#   paper\gtkwave\report.rc    larger fonts, readable at the width of the page
+# zooms on the window of the test and sets the named markers A..E at the event
+# times listed in paper\figures\wave_events.json (written by make_figures.py from
+# the same VCD), then takes a picture of the GTKWave window:
 #   paper\figures\gtkwave_T5.png   emergency during NS_G
 #   paper\figures\gtkwave_T2.png   pedestrian request
+# To look at a capture interactively, open the same view by hand:
+#   gtkwave -r paper\gtkwave\report.rc traffic_tb.vcd paper\gtkwave\T5.gtkw
 # =============================================================================
 param([string]$GtkWave = "gtkwave")
 
@@ -26,25 +33,27 @@ public static class Win {
 }
 "@
 
-# start time (ns) of every directed test
-$starts = @{}
-Get-Content logs\traffic_tb_seed1.log | ForEach-Object {
-  if ($_ -match '^TEST_START T(\d+) (\d+) ns') { $starts[[int]$Matches[1]] = [int]$Matches[2] }
-}
+$events = Get-Content paper\figures\wave_events.json -Raw | ConvertFrom-Json
+$rc = "paper\gtkwave\report.rc"
 
-foreach ($t in 5, 2) {
-  $from = $starts[$t]
-  $to   = $starts[$t + 1]
-  $tcl  = Join-Path $root "build\zoom_T$t.tcl"
-  "gtkwave::setZoomRangeTimes ${from}ns ${to}ns" | Set-Content -Encoding ascii $tcl
-  $p = Start-Process $GtkWave -ArgumentList "-S", $tcl, "traffic_tb.vcd", "traffic_tb.gtkw" -PassThru
+foreach ($t in "T5", "T2") {
+  $e = $events.$t
+  $lines = @("gtkwave::setZoomRangeTimes $([int]$e.from)ns $([int]$e.to)ns")
+  foreach ($m in $e.markers.PSObject.Properties) {
+    $lines += "gtkwave::setNamedMarker $($m.Name) $([int]$m.Value)ns"
+  }
+  $tcl = Join-Path $root "build\capture_$t.tcl"
+  $lines | Set-Content -Encoding ascii $tcl
+
+  $p = Start-Process $GtkWave -PassThru -ArgumentList `
+         "-r", $rc, "-S", $tcl, "traffic_tb.vcd", "paper\gtkwave\$t.gtkw"
   $h = [IntPtr]::Zero
   for ($i = 0; $i -lt 50 -and $h -eq [IntPtr]::Zero; $i++) {
     Start-Sleep -Milliseconds 200
     $p.Refresh()
     $h = $p.MainWindowHandle
   }
-  if ($h -eq [IntPtr]::Zero) { throw "GTKWave window not found for T$t" }
+  if ($h -eq [IntPtr]::Zero) { throw "GTKWave window not found for $t" }
   Start-Sleep -Seconds 2                    # let it draw the traces
   [Win]::SetForegroundWindow($h) | Out-Null
   Start-Sleep -Milliseconds 500
@@ -55,9 +64,9 @@ foreach ($t in 5, 2) {
   $hdc = $g.GetHdc()
   [Win]::PrintWindow($h, $hdc, 2) | Out-Null # 2 = PW_RENDERFULLCONTENT
   $g.ReleaseHdc($hdc)
-  $png = Join-Path $root "paper\figures\gtkwave_T$t.png"
+  $png = Join-Path $root "paper\figures\gtkwave_$t.png"
   $bmp.Save($png, [System.Drawing.Imaging.ImageFormat]::Png)
   $g.Dispose(); $bmp.Dispose()
   Stop-Process -Id $p.Id
-  Write-Host "wrote $png  (T$t, $from .. $to ns)"
+  Write-Host "wrote $png  ($t, $([int]$e.from) .. $([int]$e.to) ns)"
 }

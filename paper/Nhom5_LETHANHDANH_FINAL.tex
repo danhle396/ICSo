@@ -4,9 +4,11 @@
 %
 %     Nhom5_LETHANHDANH_FINAL.tex  this file
 %     results.tex                  measured numbers (written by make_figures.py)
-%     figures/wave_emg.tex         TikZ timing diagrams drawn from the VCD file
-%     figures/wave_ped.tex
-%     figures/gtkwave_T*.png       GTKWave captures (capture_gtkwave.ps1)
+%     ../diagrams/paper_*.pdf      block, state and testbench diagrams, drawn in
+%                                  draw.io (paper_*.drawio) and exported by
+%                                  diagrams\export_drawio.py
+%     figures/gtkwave_T*.png       GTKWave screenshots of traffic_tb.vcd
+%                                  (capture_gtkwave.ps1, views in gtkwave/)
 %     photos/board_B1.jpg ... board_B9.jpg   board photographs (cropped;
 %                                            originals in photos/raw/)
 %
@@ -16,6 +18,7 @@
 %     cd quartus; F:\merged_partition_content\altera\quartus\bin64\quartus_sh -t run_quartus.tcl; cd ..
 %     python paper\make_figures.py
 %     .\paper\capture_gtkwave.ps1
+%     python diagrams\export_drawio.py     (only after editing a .drawio file)
 %     cd paper; pdflatex Nhom5_LETHANHDANH_FINAL.tex   (twice)
 %
 % Draft marks: items that still need the authors (board photographs and
@@ -35,12 +38,9 @@
 \usepackage{listings}
 \usepackage{url}
 \usepackage{textcomp}
-\usepackage{pifont}                       % circled numbers of the waveform
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
 \usepackage[hidelinks]{hyperref}
 
-\graphicspath{{figures/}}
+\graphicspath{{figures/}{../diagrams/}}
 
 \newif\ifdraftmarks
 \draftmarkstrue                          % \draftmarksfalse = version to hand in
@@ -67,15 +67,6 @@
   keepspaces=true, showstringspaces=false,
   upquote=true,
   captionpos=b,
-}
-
-% ---- TikZ styles ----------------------------------------------------------------
-\tikzset{
-  >=Stealth,
-  blk/.style={draw, thick, minimum height=8mm, minimum width=17mm, align=center, font=\footnotesize},
-  sm/.style={draw, thick, circle, minimum size=11mm, inner sep=0pt, align=center, font=\scriptsize},
-  lbl/.style={font=\tiny, fill=white, inner sep=1pt},
-  sig/.style={font=\scriptsize},
 }
 
 % ---- Board photograph ----------------------------------------------------------
@@ -249,37 +240,13 @@ button gives \code{ped\_pulse}. \code{clk\_divider} produces the tick,
 \code{state\_timer} counts the ticks left in the phase, \code{traffic\_fsm}
 decides the next phase, and \code{bin2bcd8} converts the timer for the displays.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\resizebox{\columnwidth}{!}{%
-\begin{tikzpicture}[x=1cm,y=1cm]
-  \node[blk, minimum width=15mm] (strobe) at (2.5,2.1) {strobe\_gen};
-  \node[blk, minimum width=15mm] (db) at (2.5,0.6) {sync\_\\debounce $\times$5};
-  \node[blk, minimum width=13mm, minimum height=29mm] (fsm) at (5.4,0.25) {traffic\\\_fsm};
-  \node[blk, minimum width=16mm] (div) at (8.0,1.35) {clk\_divider};
-  \node[blk, minimum width=16mm] (tim) at (8.0,0.0) {state\_timer};
-  \node[blk, minimum width=16mm] (bcd) at (8.0,-1.35) {bin2bcd8};
-  \node[sig, align=right, anchor=east] (in) at (1.35,0.6)
-       {\code{emg\_sensor}\\\code{ped\_btn}\\\code{car\_ns}, \code{car\_ew}\\\code{fast}};
-  \draw[->] (in) -- (db);
-  \draw[->] (strobe) -- node[sig, right] {sample} (db);
-  \draw[->] (3.3,0.82) -- node[sig, above] {emg\_sync} (4.75,0.82);
-  \draw[->] (3.3,0.38) -- node[sig, below] {ped, cars} (4.75,0.38);
-  \draw[->] (3.3,1.0) -- (3.55,1.0) |- (7.2,2.45) -| node[sig, pos=0.25, above] {fast\_sync} (8.0,1.75);
-  \draw[->] (7.2,1.5) -- node[sig, above] {tick} (6.05,1.5);
-  \draw[->] (6.05,1.0) -- node[sig, below] {restart} (6.7,1.0) |- (7.2,1.2);
-  \draw[->] (6.05,0.15) -- node[sig, above] {load} (7.2,0.15);
-  \draw[<-] (6.05,-0.15) -- node[sig, below] {last} (7.2,-0.15);
-  \draw[->] (8.8,1.35) -- (9.05,1.35) |- (8.8,0.0);
-  \draw[->] (tim) -- node[sig, right] {cnt} (bcd);
-  \draw[->] (bcd.south) -- ++(0,-0.35) node[sig, below] {\code{time\_left}};
-  \draw[->] (fsm.south) -- ++(0,-0.35) node[sig, below, align=center]
-       {\code{light\_ns}, \code{light\_ew},\\ \code{ped\_lamp}, \code{emergency\_active}};
-\end{tikzpicture}}
+\includegraphics[width=0.92\textwidth]{paper_block.pdf}
 \caption{Block diagram of \code{traffic\_top}. The FSM restarts the time base
 whenever a phase starts (\code{restart} = \code{load}).}
 \label{fig:block}
-\end{figure}
+\end{figure*}
 
 \subsection{State machine}
 The controller is the 9-state Moore machine of Fig.~\ref{fig:fsm} and
@@ -304,52 +271,16 @@ The emergency override follows four rules.
       \st{RECOVER}; an emergency during \st{PED\_WALK} ends the walk.
 \end{enumerate}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\resizebox{\columnwidth}{!}{%
-\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
-  \node[sm, fill=green!20] (nsg) at (0,3)   {NS\_G\\0};
-  \node[sm, fill=yellow!40] (nsy) at (2.4,3) {NS\_Y\\1};
-  \node[sm, fill=red!15] (r1)  at (4.8,3)   {RED1\\2};
-  \node[sm, fill=green!20] (ewg) at (4.8,0) {EW\_G\\3};
-  \node[sm, fill=yellow!40] (ewy) at (2.4,0) {EW\_Y\\4};
-  \node[sm, fill=red!15] (r2)  at (0,0)     {RED2\\5};
-  \node[sm, fill=blue!10] (ped) at (2.4,1.5) {PED\\6};
-  \node[sm, fill=red!35, double] (emg) at (7.4,1.5) {EMG\\7};
-  \node[sm, fill=red!15] (rec) at (9.8,1.5)  {RECOV\\8};
-  % normal cycle
-  \draw[->, thick] (nsg) -- node[lbl, above] {done} (nsy);
-  \draw[->, thick] (nsy) -- node[lbl, above] {done} (r1);
-  \draw[->, thick] (r1) -- node[lbl, right, pos=0.3] {done} (ewg);
-  \draw[->, thick] (ewg) -- node[lbl, below] {done} (ewy);
-  \draw[->, thick] (ewy) -- node[lbl, below] {done} (r2);
-  \draw[->, thick] (r2) -- node[lbl, left] {done} (nsg);
-  \draw[->] (nsg) to[out=150,in=210,looseness=6] node[lbl, left] {ext} (nsg);
-  \draw[->] (ewg) to[out=-30,in=30,looseness=6] node[lbl, right] {ext} (ewg);
-  \draw[->, dashed] (nsg) to[bend left=25] node[lbl, below] {emg} (nsy);
-  \draw[->, dashed] (ewg) to[bend left=25] node[lbl, above] {emg} (ewy);
-  % pedestrian
-  \draw[->] (r1) -- node[lbl, pos=0.45] {ped} (ped);
-  \draw[->] (r2) -- node[lbl, pos=0.45] {ped} (ped);
-  \draw[->] (ped) -- node[lbl, pos=0.55] {!n\_ew} (nsg);
-  \draw[->] (ped) -- node[lbl, pos=0.55] {n\_ew} (ewg);
-  % emergency
-  \draw[->, red, dashed] (nsy) to[out=35,in=110] node[lbl, pos=0.35] {done$\wedge$emg} (emg);
-  \draw[->, red, dashed] (r1) -- node[lbl, pos=0.45] {emg} (emg);
-  \draw[->, red, dashed] (ped) to[out=12,in=180] node[lbl, pos=0.3] {emg} (emg);
-  \draw[->, red, dashed] (ewy) to[out=-35,in=-110] node[lbl, pos=0.62] {done$\wedge$emg} (emg);
-  \draw[->, red, dashed] (r2) to[out=-60,in=-95,looseness=1.15] node[lbl, pos=0.5] {emg} (emg);
-  \draw[->, red, thick] (emg) to[bend left=22] node[lbl, above] {!emg} (rec);
-  \draw[->, red, dashed] (rec) to[bend left=22] node[lbl, below] {emg} (emg);
-  \draw[->] (rec) to[out=-100,in=-10] node[lbl, pos=0.55] {done$\wedge$n\_ew} (ewg);
-  \draw[->] (rec) to[out=95,in=60,looseness=0.9] node[lbl, pos=0.2] {done$\wedge$!n\_ew} (nsg);
-  \node[font=\tiny, align=center] at (9.8,0.55) {done$\wedge$ped\\$\to$ PED};
-\end{tikzpicture}}
-\caption{State diagram. Black: normal cycle (thick), green extension (ext) and
-pedestrian phase; dashed red: emergency arcs. n\_ew: \code{next\_ew}. Priority in
-every state: emg, then extension, then pedestrian, then end of phase.}
+\includegraphics[width=0.78\textwidth]{paper_fsm.pdf}
+\caption{State diagram. Thick: normal cycle; \emph{ext}: green extension by one
+tick; dashed red: emergency arcs. The states in the dashed box go to
+\st{EMERGENCY} as labelled; \st{RECOVER} goes to \st{PED\_WALK} if a request is
+pending, else to the green of the road that was stopped. Priority in every state:
+emg, then extension, then pedestrian, then end of phase.}
 \label{fig:fsm}
-\end{figure}
+\end{figure*}
 
 \begin{table*}[t]
 \centering
@@ -444,20 +375,7 @@ board.
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[node distance=3mm and 5mm]
-  \node[blk, minimum width=22mm] (stim) {stimulus\\directed + random};
-  \node[blk, right=8mm of stim, minimum width=18mm] (dut) {DUT\\\code{traffic\_top}};
-  \node[blk, below=4mm of dut, minimum width=18mm] (chk) {checker\\(8 properties)};
-  \node[blk, above=4mm of dut, minimum width=18mm, dashed] (sva) {SVA (bind)\\spec};
-  \node[blk, right=7mm of dut, minimum width=14mm] (cov) {coverage\\9 + 24};
-  \node[blk, below=4mm of stim, minimum width=22mm] (gold) {golden model\\(Python)};
-  \draw[->] (stim) -- (dut);
-  \draw[->] (dut) -- (chk);
-  \draw[->, dashed] (dut) -- (sva);
-  \draw[->] (dut) -- (cov);
-  \draw[->] (stim) -- node[sig, left] {stim\_*.txt} (gold);
-  \draw[->] (dut.south west) -- node[sig, above, sloped] {rtl\_*.txt} (gold.east);
-\end{tikzpicture}
+\includegraphics[width=\columnwidth]{paper_tb.pdf}
 \caption{Verification environment (\code{traffic\_tb.sv}).}
 \label{fig:tb}
 \end{figure}
@@ -606,29 +524,25 @@ M6 & no divider restart & \MutErrF & \MutViolF & \MutPropsF & \MutGoldF \\
 \end{table}
 
 \subsection{Waveforms}
-Fig.~\ref{fig:wave} is drawn from the VCD file of test T5: the switch rises at
-\ding{172}, the debounced request reaches the FSM at the \WaveDbLat{}th rising
-edge and the green ends; the yellow \ding{173} lasts \WaveYellow{} cycles (3
-ticks) although it started between two ticks; at \ding{174} every lamp is red and
-\code{time\_left} shows 00; after the release \ding{175}, \st{RECOVER}
-\ding{176} lasts \WaveRecover{} cycles and the EW road, which was not stopped,
-gets the green. Fig.~\ref{fig:gtk} shows the same test and T2 in GTKWave.
+Fig.~\ref{fig:gtk} shows two directed tests as GTKWave~\cite{gtkwave} displays
+the dump \code{traffic\_tb.vcd} of the simulation. The state and the lamps are
+shown by name through GTKWave translate filters, and the markers A to E are placed
+at event times read from the same file. In test T5 (top) the switch rises at A;
+the debounced request reaches the FSM at the \WaveDbLat{}th rising edge and the
+green ends at B; the yellow lasts \WaveYellow{} cycles (3 ticks) although it
+started between two ticks; at C every lamp is red and \code{time\_left} shows 00;
+after the release D, \st{RECOVER} (E) lasts \WaveRecover{} cycles and the EW road,
+which was not stopped, gets the green. In test T2 (bottom) the button is pressed
+at A, during \st{NS\_Y}; the request is latched at B, \st{PED\_WALK} follows
+\st{RED1} at C and lasts 5 ticks, and the EW road gets the green at D.
 
 \begin{figure*}[t]
 \centering
-\resizebox{\textwidth}{!}{\input{figures/wave_emg.tex}}
-\caption{Test T5 (emergency during \st{NS\_G}), drawn from the VCD file. One tick
-is 4 clock cycles. Numbered events are explained in the text.}
-\label{fig:wave}
-\end{figure*}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.88\textwidth]{gtkwave_T5.png}\\[2pt]
-\includegraphics[width=0.88\textwidth]{gtkwave_T2.png}
-\caption{GTKWave: test T5 (top, emergency during \st{NS\_G}) and test T2
-(bottom, button pressed during \st{NS\_Y}: \code{ped\_req} is latched,
-\st{PED\_WALK} follows \st{RED1}).}
+\includegraphics[width=0.94\textwidth]{gtkwave_T5.png}\\[3pt]
+\includegraphics[width=0.94\textwidth]{gtkwave_T2.png}
+\caption{GTKWave screenshots of \code{traffic\_tb.vcd} (one tick = 4 clock
+cycles). Top: test T5, emergency during \st{NS\_G}. Bottom: test T2, button
+pressed during \st{NS\_Y}. Markers A--E are explained in the text.}
 \label{fig:gtk}
 \end{figure*}
 
@@ -849,6 +763,7 @@ Specification, and Verification Language}, IEEE Std 1800-2017, 2018.
 \bibitem{de2} Altera Corp., \emph{DE2 Development and Education Board User
 Manual}, v1.4, 2006.
 \bibitem{icarus} S.~Williams, \emph{Icarus Verilog}, \url{https://steveicarus.github.io/iverilog/}.
+\bibitem{gtkwave} T.~Bybell, \emph{GTKWave Electronic Waveform Viewer}, version 3.3, \url{https://gtkwave.sourceforge.net/}.
 \end{thebibliography}
 
 % =============================================================================

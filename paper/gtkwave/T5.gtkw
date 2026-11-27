@@ -1,0 +1,23 @@
+[dumpfile] "traffic_tb.vcd"
+[size] 1200 440
+[pos] 0 0
+[signals_width] 230
+[sst_expanded] 0
+[sst_width] 0
+@28
+traffic_tb.clk
+traffic_tb.emg_sensor
+traffic_tb.dut.emg_sync
+traffic_tb.dut.tick
+@2024
+^1 paper/gtkwave/state.txt
+traffic_tb.state_dbg[3:0]
+@2028
+^2 paper/gtkwave/lamp.txt
+traffic_tb.light_ns[2:0]
+^2 paper/gtkwave/lamp.txt
+traffic_tb.light_ew[2:0]
+@22
+traffic_tb.time_left[7:0]
+@28
+traffic_tb.emergency_active

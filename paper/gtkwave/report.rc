@@ -1,0 +1,5 @@
+; GTKWave settings for the report captures (capture_gtkwave.ps1): larger fonts
+fontname_signals Courier New Bold 15
+fontname_waves Courier New Bold 13
+fontname_logfile Courier New 13
+use_big_fonts yes
